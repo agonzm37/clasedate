@@ -76,9 +76,8 @@ public class Date {
 
 
 	public void setDay(int day) throws DateException {
-		if ( day < 1 || day > this.getDaysOfMonth() ) {
-			throw new DateException("Date error: Day " + day + " of month " + this.month + " not valid");			
-		}
+					
+		
 		switch(this.month) {
 			case 1:
 			case 3:
@@ -138,7 +137,7 @@ public class Date {
 		if ( month < 1 || month > 12) {
 			throw new DateException("Date error: Month " + month + " not valid");
 		}else{
-e		this.month = month;
+		this.month = month;
 		}
 	}
 
@@ -168,7 +167,7 @@ e		this.month = month;
 	public void setYear (int year) throws DateException{
 		if(year <= 0 
 				){
-			throw new DateException("A�o " + month + " no valido. El a�o no puede ser negativo.");
+			throw new DateException("Anyo " + month + " no valido. El anyo no puede ser negativo.");
 		}else{
 			this.year = year;
 
@@ -292,7 +291,7 @@ e		this.month = month;
 
 		
 	
-	private int getDaysOfMonth() {
+	public int daysOfMonth() {
 		int numDays;
 		
 		numDays = 0;
@@ -460,20 +459,6 @@ e		this.month = month;
 		return attemps;
 	}
 
-	public int numRandomTriesEqualDate(){
-
-		int day2_ = 0;
-		int month2_ = 0;
-		int attemps2 = 0;
-
-		while((day2_ != this.day) && (month2_ != this.month)){
-			day2_ = (int)((Math.random()*31)+1);
-			month2_ = (int)((Math.random()*12)+1);
-			attemps2 = attemps2 + 1;
-		}
-
-		return attemps2;
-	}
 	
 	public String dayOfWeek(int day) throws DateException {
 		
