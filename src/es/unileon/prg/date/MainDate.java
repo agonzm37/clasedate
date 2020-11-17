@@ -1,4 +1,4 @@
-package es.unileon.prg.clase_date;
+package es.unileon.prg.date;
 
 public class MainDate {
 
